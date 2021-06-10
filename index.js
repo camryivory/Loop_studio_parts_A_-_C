@@ -18,7 +18,6 @@ console.log(`\n`)
 
 let mealsNumber = Number(input.question("How many meals would you like to assemble? \n(Please enter an integer between 1 and 6): "));
 
-
 while (mealsNumber < 1 || mealsNumber > 6) {
   mealsNumber = input.question("Invalid entry.  Please enter a number between 1-6: ")
 } 
@@ -26,8 +25,8 @@ while (mealsNumber < 1 || mealsNumber > 6) {
 console.log(`\nPrinting ${mealsNumber} meals:\n`)
 for (let j = 0; j < mealsNumber; j++){
   console.log(`Meal ${j +1} is: ${proteins[j]}, ${grains[j]}, ${vegetables[j]}, ${beverages[j]}, ${fruit[j]}`);
-  if (vegetables[j].includes("more kale") === true) {
-    vegetables.push("Don't worry, you can have extra chocolate tomorrow.")
+  if (vegetables[j].includes("kale") === true) {
+    console.log("(Don't worry, you can have double chocolate tomorrow!)\n")
   }
 }
 
